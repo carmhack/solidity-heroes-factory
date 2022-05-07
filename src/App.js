@@ -29,7 +29,7 @@ function App() {
       setAccount(accounts[0]);
       setContract(
         new ethers.Contract(
-          "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512",
+          "INDIRIZZO GENERATO DAL DEPLOY",
           HeroesFactory.abi,
           signer
         )

@@ -17,11 +17,11 @@ task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
 module.exports = {
   solidity: "0.8.9",
   paths: {
-    artifacts: "./src/artifacts", /* useful for React */
+    artifacts: "./src/artifacts",
   },
   networks: {
     hardhat: {
-      chainId: 1337, /* useful for Metamask */
+      chainId: 1337,
     },
   },
 };

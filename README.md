@@ -28,7 +28,19 @@ per effettuare il deploy del contratto sul network locale (o su qualsiasi altro 
 1. Installiamo le dipendenze
     `npm i ethers hardhat @nomiclabs/hardhat-waffle ethereum-waffle chai @nomiclabs/hardhat-ethers`
 1. Configuriamo il file `hardhat.config.js` come segue
-    ![hardhat config](hardhatconfig.png)
+    ```
+    module.exports = {
+        solidity: "0.8.9",
+        paths: {
+            artifacts: "./src/artifacts",
+        },
+        networks: {
+            hardhat: {
+            chainId: 1337,
+            },
+        },
+    };
+    ```
     L’aggiunta di `paths` serve per il frontend, perché React non ha accesso al di fuori della cartella src. Il network `hardhat` invece è il network locale con l’id per usare Metamask.
 1. Viene generato un json dentro src/artifacts/contracts/HeroesFactory.sol/ che contiene l’ABI dello smart contract
 1. `npx hardhat node`
